@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneCreativity | Booking</title>
+  <meta name="description" content="Create a booking request and save summary." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="../index.html" aria-label="OneCreativity Home">
+        <span class="brand-mark" aria-hidden="true">◼</span>
+        <span class="brand-name">OneCreativity</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary Navigation">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="studios.html">Studios</a>
+        <a class="nav-link" href="freelancers.html">Freelancers</a>
+        <a class="nav-link" href="booking.html">Booking</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span id="themeIcon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero page-hero--booking">
+      <div class="bg-motion" aria-hidden="true"></div>
+      <div class="glow-orbs" aria-hidden="true">
+        <span class="orb orb-3"></span>
+        <span class="orb orb-1"></span>
+      </div>
+
+      <div class="container">
+        <p class="kicker reveal">Booking</p>
+        <h1 class="reveal">Create your booking request</h1>
+        <p class="lead reveal">
+          Select a service, choose a provider (studio or freelancer), add date/location,
+          and save your booking summary (LocalStorage).
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <form class="card form reveal" id="bookingForm" novalidate aria-label="Booking form">
+          <h2>Booking Details</h2>
+
+          <label class="field">
+            <span>Service</span>
+            <select id="bkService" required>
+              <option value="">Choose a service</option>
+            </select>
+            <small class="error" id="errBkService"></small>
+          </label>
+
+          <div class="grid grid-2">
+            <label class="field">
+              <span>Provider Type</span>
+              <select id="bkProviderType" required>
+                <option value="">Choose</option>
+                <option value="studio">Studio</option>
+                <option value="freelancer">Freelancer</option>
+              </select>
+              <small class="error" id="errBkType"></small>
+            </label>
+
+            <label class="field">
+              <span>Provider</span>
+              <select id="bkProvider" required>
+                <option value="">Select provider</option>
+              </select>
+              <small class="error" id="errBkProvider"></small>
+            </label>
+          </div>
+
+          <div class="grid grid-2">
+            <label class="field">
+              <span>Date</span>
+              <input type="date" id="bkDate" required />
+              <small class="error" id="errBkDate"></small>
+            </label>
+
+            <label class="field">
+              <span>City</span>
+              <input type="text" id="bkCity" placeholder="Addis Ababa..." required />
+              <small class="error" id="errBkCity"></small>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Notes</span>
+            <textarea id="bkNotes" rows="4" placeholder="Style, budget, location details..." required></textarea>
+            <small class="error" id="errBkNotes"></small>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Save Booking Summary</button>
+
+<button class="btn btn-outline" type="button" id="bkClear">Clear Saved</button>
+          </div>
+
+          <p class="muted" id="bkStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <section class="card card--soft reveal" aria-label="Booking summary">
+          <h2>Saved Summary</h2>
+          <p class="muted">This summary is stored in LocalStorage (demo of web storage).</p>
+          <div class="summary" id="bkSummary"></div>
+
+          <div class="hero-actions">
+            <a class="btn" href="contact.html">Send Request</a>
+            <a class="btn btn-outline" href="services.html">Change Service</a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> OneCreativity</p>
+      <p class="muted">Booking summary (LocalStorage)</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

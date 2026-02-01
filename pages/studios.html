@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneCreativity | Studios</title>
+  <meta name="description" content="Browse studios, filter, save favorites, and preview." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="../index.html" aria-label="OneCreativity Home">
+        <span class="brand-mark" aria-hidden="true">◼</span>
+        <span class="brand-name">OneCreativity</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary Navigation">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="studios.html">Studios</a>
+        <a class="nav-link" href="freelancers.html">Freelancers</a>
+        <a class="nav-link" href="booking.html">Booking</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span id="themeIcon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero page-hero--studios">
+      <div class="bg-motion" aria-hidden="true"></div>
+      <div class="glow-orbs" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-3"></span>
+      </div>
+
+      <div class="container">
+        <p class="kicker reveal">Studios</p>
+        <h1 class="reveal">Compare studios and book with confidence</h1>
+        <p class="lead reveal">Search, filter by city, favorite, preview (saved to Recent).</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-head reveal">
+        <div>
+          <h2>Studio Listings</h2>
+          <p class="muted">Rendered from JavaScript data.</p>
+        </div>
+
+        <div class="controls">
+          <input id="searchStudio" type="search" placeholder="Search by name or city..." aria-label="Search studios" />
+          <select id="cityStudio" aria-label="Filter studios by city">
+            <option value="all">All cities</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="container grid" id="studiosGrid" aria-live="polite"></div>
+    </section>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-head">
+          <h3 id="modalTitle">Studio Preview</h3>
+          <button class="icon-btn" id="modalClose" aria-label="Close modal" type="button">✕</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+        <div class="modal-actions">
+          <button class="btn btn-outline" id="modalCancel" type="button">Cancel</button>
+          <a class="btn" href="booking.html">Continue to Booking</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> OneCreativity</p>
+      <p class="muted">Search + filter + favorites + skeleton</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

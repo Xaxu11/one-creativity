@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneCreativity | Contact</title>
+  <meta name="description" content="Send a request using a validated contact form (demo)." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="../index.html" aria-label="OneCreativity Home">
+        <span class="brand-mark" aria-hidden="true">◼</span>
+        <span class="brand-name">OneCreativity</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary Navigation">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="studios.html">Studios</a>
+        <a class="nav-link" href="freelancers.html">Freelancers</a>
+        <a class="nav-link" href="booking.html">Booking</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span id="themeIcon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero page-hero--contact">
+      <div class="bg-motion" aria-hidden="true"></div>
+      <div class="glow-orbs" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-3"></span>
+      </div>
+
+      <div class="container">
+        <p class="kicker reveal">Contact</p>
+        <h1 class="reveal">Send your booking request</h1>
+        <p class="lead reveal">Validation is handled in JavaScript (demo — no backend).</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form class="card form reveal" id="contactForm" novalidate aria-label="Contact form">
+          <div class="grid grid-2">
+            <label class="field">
+              <span>Full Name</span>
+              <input type="text" id="fullName" placeholder="Your full name" required />
+              <small class="error" id="errName"></small>
+            </label>
+
+            <label class="field">
+              <span>Email</span>
+              <input type="email" id="email" placeholder="name@example.com" required />
+              <small class="hint">We will only use this to reply to your request.</small>
+              <small class="error" id="errEmail"></small>
+            </label>
+
+            <label class="field">
+              <span>Phone (optional)</span>
+              <input type="tel" id="phone" placeholder="+251..." />
+              <small class="hint">Optional, for faster follow-up.</small>
+            </label>
+
+            <label class="field">
+              <span>Request Type</span>
+              <select id="service" required>
+                <option value="">Choose one</option>
+                <option value="booking">Booking Request</option>
+                <option value="support">Support</option>
+                <option value="partnership">Partnership</option>
+              </select>
+              <small class="error" id="errService"></small>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Message</span>
+            <textarea id="message" rows="6" placeholder="Write your request..." required></textarea>
+            <small class="error" id="errMessage"></small>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Submit</button>
+            <button class="btn btn-outline" type="reset">Reset</button>
+          </div>
+
+          <p class="muted" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <footer class="site-footer">
+
+<div class="container footer-row">
+      <p>© <span id="year"></span> OneCreativity</p>
+      <p class="muted">Validated contact form</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
