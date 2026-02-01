@@ -1,23 +1,30 @@
 <!doctype html>
+<!-- Main HTML document for OneCreativity homepage -->
 <html lang="en">
 <head>
+  <!-- Basic meta tags for character encoding and viewport -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneCreativity | Home</title>
+  <!-- SEO meta description -->
   <meta name="description" content="OneCreativity connects clients with studios and freelancers for bookings and creative services." />
+  <!-- Link to main stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Main site header with navigation -->
   <header class="site-header">
     <div class="container header-row">
+      <!-- Brand logo and name -->
       <a class="brand" href="index.html" aria-label="OneCreativity Home">
         <span class="brand-mark" aria-hidden="true">◼</span>
         <span class="brand-name">OneCreativity</span>
       </a>
 
+      <!-- Primary navigation menu -->
       <nav class="nav" aria-label="Primary Navigation">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="pages/services.html">Services</a>
@@ -28,17 +35,21 @@
         <a class="nav-link" href="pages/contact.html">Contact</a>
       </nav>
 
+      <!-- Theme toggle button for dark/light mode -->
       <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
         <span id="themeIcon" aria-hidden="true">🌙</span>
       </button>
     </div>
   </header>
 
+  <!-- Main content area -->
   <main id="main">
-    <!-- HERO -->
+    <!-- HERO SECTION with background effects -->
     <section class="hero hero--home">
+      <!-- Animated background element -->
       <div class="bg-motion" aria-hidden="true"></div>
 
+      <!-- Decorative glow orbs for visual effect -->
       <div class="glow-orbs" aria-hidden="true">
         <span class="orb orb-1"></span>
         <span class="orb orb-2"></span>
@@ -46,6 +57,7 @@
       </div>
 
       <div class="container hero-grid">
+        <!-- Main hero content with title and description -->
         <div class="hero-content">
           <p class="kicker reveal">Creative Marketplace</p>
           <h1 class="reveal">Find studios, hire freelancers, book services — fast.</h1>
@@ -54,11 +66,13 @@
             editing, and event coverage — built with clean HTML/CSS/JS and modern motion.
           </p>
 
+          <!-- Call-to-action buttons -->
           <div class="hero-actions reveal">
             <a class="btn" href="pages/booking.html">Start Booking</a>
             <a class="btn btn-outline" href="pages/services.html">View Services</a>
           </div>
 
+          <!-- Feature badges highlighting platform capabilities -->
           <div class="badges reveal" aria-label="Highlights">
             <span class="badge">Responsive</span>
             <span class="badge">DOM Rendering</span>
@@ -69,15 +83,18 @@
           </div>
         </div>
 
+        <!-- Side panel with statistics and overview -->
         <aside class="hero-panel reveal" aria-label="Quick overview">
           <h2 class="panel-title">Platform Snapshot</h2>
 
+          <!-- Dynamic statistics display -->
           <ul class="stats" aria-label="Statistics">
             <li><strong id="statStudios">0</strong><span>Studios</span></li>
             <li><strong id="statFreelancers">0</strong><span>Freelancers</span></li>
             <li><strong id="statFavorites">0</strong><span>Favorites</span></li>
           </ul>
 
+          <!-- Additional information panel -->
           <div class="panel-note">
             <p class="muted">
               This project demonstrates: semantic HTML, responsive CSS (Flex/Grid),
@@ -85,6 +102,7 @@
             </p>
           </div>
 
+          <!-- Panel action buttons -->
           <div class="panel-actions">
             <a class="btn btn-outline w-100" href="pages/about.html">How it works</a>
           </div>
@@ -92,7 +110,7 @@
       </div>
     </section>
 
-    <!-- STRIP -->
+    <!-- HIGHLIGHTS STRIP SECTION -->
     <section class="strip reveal" aria-label="Highlights">
       <div class="container strip-row">
         <div class="strip-item">
@@ -101,8 +119,7 @@
         </div>
         <div class="strip-item">
           <strong>Book Confidently</strong>
-
-<span class="muted">Preview + request flow</span>
+          <span class="muted">Preview + request flow</span>
         </div>
         <div class="strip-item">
           <strong>Save Favorites</strong>
@@ -111,7 +128,7 @@
       </div>
     </section>
 
-    <!-- POPULAR SERVICES -->
+    <!-- POPULAR SERVICES SECTION -->
     <section class="section">
       <div class="container section-head reveal">
         <div>
@@ -121,10 +138,11 @@
         <a class="btn btn-outline" href="pages/services.html">All services</a>
       </div>
 
+      <!-- Container for dynamically loaded services -->
       <div class="container grid grid-3" id="homeServices"></div>
     </section>
 
-    <!-- RECENTLY VIEWED -->
+    <!-- RECENTLY VIEWED SECTION -->
     <section class="section">
       <div class="container section-head reveal">
         <div>
@@ -134,10 +152,11 @@
         <button class="btn btn-outline" id="clearRecent" type="button">Clear</button>
       </div>
 
+      <!-- Container for recently viewed items -->
       <div class="container grid grid-3" id="recentGrid"></div>
     </section>
 
-    <!-- CTA -->
+    <!-- CALL TO ACTION SECTION -->
     <section class="section section--cta reveal">
       <div class="container cta">
         <div>
@@ -151,15 +170,20 @@
       </div>
     </section>
 
-    <!-- MODAL -->
+    <!-- MODAL DIALOG for previews -->
     <div class="modal" id="modal" aria-hidden="true">
+      <!-- Modal backdrop for closing -->
       <div class="modal-backdrop" data-close="true"></div>
+      <!-- Modal content container -->
       <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <!-- Modal header with title and close button -->
         <div class="modal-head">
           <h3 id="modalTitle">Preview</h3>
           <button class="icon-btn" id="modalClose" aria-label="Close modal" type="button">✕</button>
         </div>
+        <!-- Modal body content area -->
         <div class="modal-body" id="modalBody"></div>
+        <!-- Modal action buttons -->
         <div class="modal-actions">
           <button class="btn btn-outline" id="modalCancel" type="button">Cancel</button>
           <a class="btn" href="pages/booking.html">Continue to Booking</a>
@@ -168,15 +192,20 @@
     </div>
   </main>
 
+  <!-- Back to top button -->
   <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
 
+  <!-- Site footer -->
   <footer class="site-footer">
     <div class="container footer-row">
-      <p>© <span id="year"></span> OneCreativity</p>
+      <!-- Copyright information -->
+      <p>  <span id="year"></span> OneCreativity</p>
+      <!-- Project description -->
       <p class="muted">Final Project — Intro to Web Development</p>
     </div>
   </footer>
 
+  <!-- Main JavaScript file -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
