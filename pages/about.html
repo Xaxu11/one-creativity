@@ -1,23 +1,31 @@
 <!doctype html>
+<!-- About page for OneCreativity platform -->
 <html lang="en">
 <head>
+  <!-- Meta tags for character encoding and responsive design -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneCreativity | About</title>
+  <!-- SEO meta description for about page -->
   <meta name="description" content="About the OneCreativity demo platform and features." />
+  <!-- Link to main stylesheet -->
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
 <body>
+  <!-- Accessibility skip link -->
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Site header with navigation -->
   <header class="site-header">
     <div class="container header-row">
+      <!-- Brand logo linking to home -->
       <a class="brand" href="../index.html" aria-label="OneCreativity Home">
         <span class="brand-mark" aria-hidden="true">◼</span>
         <span class="brand-name">OneCreativity</span>
       </a>
 
+      <!-- Main navigation menu -->
       <nav class="nav" aria-label="Primary Navigation">
         <a class="nav-link" href="../index.html">Home</a>
         <a class="nav-link" href="services.html">Services</a>
@@ -28,21 +36,27 @@
         <a class="nav-link" href="contact.html">Contact</a>
       </nav>
 
+      <!-- Theme toggle button -->
       <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
         <span id="themeIcon" aria-hidden="true">🌙</span>
       </button>
     </div>
   </header>
 
+  <!-- Main content area -->
   <main id="main">
+    <!-- Page hero section with animated background -->
     <section class="page-hero page-hero--about">
+      <!-- Animated background element -->
       <div class="bg-motion" aria-hidden="true"></div>
+      <!-- Decorative glow orbs -->
       <div class="glow-orbs" aria-hidden="true">
         <span class="orb orb-2"></span>
         <span class="orb orb-3"></span>
       </div>
 
       <div class="container">
+        <!-- Page title and description -->
         <p class="kicker reveal">About</p>
         <h1 class="reveal">Modern UI + strong fundamentals</h1>
         <p class="lead reveal">
@@ -52,8 +66,11 @@
       </div>
     </section>
 
+    <!-- Content section with cards -->
     <section class="section">
+      <!-- Two-column grid for platform info -->
       <div class="container grid grid-2">
+        <!-- Platform concept card -->
         <article class="card reveal">
           <h2>Platform Idea</h2>
           <p class="muted">
@@ -62,6 +79,7 @@
           </p>
         </article>
 
+        <!-- What I implemented card -->
         <article class="card reveal">
           <h2>What I implemented</h2>
           <p class="muted">
@@ -71,9 +89,12 @@
         </article>
       </div>
 
+      <!-- Skills demonstration section -->
       <div class="container">
+        <!-- Full-width card with skills list -->
         <article class="card card--soft reveal">
           <h2>Skills Demonstrated</h2>
+          <!-- Technical skills list -->
           <ul class="list">
             <li>Semantic HTML structure (header/nav/main/section/footer)</li>
             <li>Responsive CSS layout (Flexbox + Grid)</li>
@@ -89,15 +110,20 @@
     </section>
   </main>
 
+  <!-- Back to top button -->
   <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
 
+  <!-- Site footer -->
   <footer class="site-footer">
     <div class="container footer-row">
+      <!-- Copyright information -->
       <p>© <span id="year"></span> OneCreativity</p>
+      <!-- Page description -->
       <p class="muted">Project explanation</p>
     </div>
   </footer>
 
+  <!-- Main JavaScript file -->
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
